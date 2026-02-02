@@ -26,6 +26,10 @@ const ApiEndPoint=
      faqEdit:`${API_BASE_URL}/api/faqEdit`,
      faqDeleted:`${API_BASE_URL}/api/faqDeleted`,
      fetchFaq:`${API_BASE_URL}/api/fetchFaq`,
-     faqView:`${API_BASE_URL}/api/faqView`
+     faqView:`${API_BASE_URL}/api/faqView`,
+     fetchDataHost:`${API_BASE_URL}/api/fetchDataHost`,
+     deleteHost:`${API_BASE_URL}/api/deleteHost`,
+      fetchSingleHost:`${API_BASE_URL}/api/fetchSingleHost`,
+      editHost:`${API_BASE_URL}/api/editHost`
 }
 export default ApiEndPoint;

@@ -1,5 +1,5 @@
-/* ===== Page Container ===== */
-.user-container {
+/* ===== Container ===== */
+.hostlist-container {
   min-height: 100vh;
   background: linear-gradient(135deg, #eef2f7, #f9fafb);
   padding: 40px;
@@ -10,7 +10,7 @@
 }
 
 /* ===== Table Wrapper ===== */
-.userData-container {
+.hostlist-data {
   width: 100%;
   max-width: 1200px;
   background: #ffffff;
@@ -21,17 +21,17 @@
 }
 
 /* ===== Table ===== */
-table {
+.hostlist-data table {
   width: 100%;
   border-collapse: collapse;
 }
 
 /* ===== Table Head ===== */
-thead {
+.hostlist-data thead {
   background: linear-gradient(135deg, #4f46e5, #6366f1);
 }
 
-thead th {
+.hostlist-data thead th {
   color: #ffffff;
   text-align: left;
   padding: 14px;
@@ -41,20 +41,20 @@ thead th {
 }
 
 /* ===== Table Body ===== */
-tbody tr {
+.hostlist-data tbody tr {
   transition: background 0.25s ease, transform 0.2s ease;
 }
 
-tbody tr:nth-child(even) {
+.hostlist-data tbody tr:nth-child(even) {
   background: #f9fafb;
 }
 
-tbody tr:hover {
+.hostlist-data tbody tr:hover {
   background: #eef2ff;
   transform: scale(1.01);
 }
 
-tbody td {
+.hostlist-data tbody td {
   padding: 14px;
   font-size: 14px;
   color: #374151;
@@ -96,7 +96,7 @@ tbody td {
   transform: translateY(-2px);
 }
 
-/* View Button */
+/* View / Edit Button */
 .btn-view {
   background: #e0e7ff;
   color: #4338ca;
@@ -109,27 +109,28 @@ tbody td {
 }
 
 /* ===== Empty State ===== */
-tbody td[colspan="7"] {
+.hostlist-data tbody td[colspan="7"] {
   font-size: 16px;
   color: #6b7280;
   font-weight: 500;
+  text-align: center;
 }
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
-  thead {
+  .hostlist-data thead {
     display: none;
   }
 
-  table,
-  tbody,
-  tr,
-  td {
+  .hostlist-data table,
+  .hostlist-data tbody,
+  .hostlist-data tr,
+  .hostlist-data td {
     display: block;
     width: 100%;
   }
 
-  tbody tr {
+  .hostlist-data tbody tr {
     margin-bottom: 20px;
     border-radius: 12px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
@@ -137,214 +138,15 @@ tbody td[colspan="7"] {
     background: #ffffff;
   }
 
-  tbody td {
+  .hostlist-data tbody td {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
   }
 
-  tbody td::before {
+  .hostlist-data tbody td::before {
     content: attr(data-label);
     font-weight: 600;
     color: #4f46e5;
-  }
-}
-
-
-/* Full page background */
-.profileView-container {
-   height: 398px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  margin-top: 12px;
-  margin-right: 326px;
-}
-
-/* Main card */
-.profileData-container {
-  background: #ffffff;
-  width: 100%;
-  max-width: 420px;
-  padding: 30px 25px;
-  border-radius: 18px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  animation: fadeIn 0.6s ease-in-out;
-}
-
-/* Heading */
-.profileData-container h1 {
-  font-size: 22px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 25px;
-  letter-spacing: 1px;
-}
-
-/* Image section */
-.image-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.image-container img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #764ba2;
-  box-shadow: 0 10px 20px rgba(118, 75, 162, 0.4);
-}
-
-.image-container p {
-  color: #888;
-  font-size: 14px;
-}
-
-/* Labels */
-.profileData-container h2 {
-  font-size: 13px;
-  color: #666;
-  text-align: left;
-  margin: 12px 0 6px;
-  letter-spacing: 0.5px;
-}
-
-/* Inputs (readonly look) */
-.profileData-container input {
-  width: 80%;
-  padding: 10px 12px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  background-color: #f9f9f9;
-  font-size: 14px;
-  color: #333;
-  outline: none;
-  cursor: not-allowed;
-}
-
-/* Subtle hover effect */
-.profileData-container input:hover {
-  background-color: #f1f1f1;
-}
-
-/* Smooth fade animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Mobile responsive */
-@media (max-width: 480px) {
-  .profileData-container {
-    padding: 25px 18px;
-  }
-
-  .profileData-container h1 {
-    font-size: 20px;
-  }
-
-  .image-container img {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-
-
-
-
-/* Main container */
-.UserProfile-Edit {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Card */
-.UserProfileEdit-view {
-  width: 420px;
-  background: #ffffff;
-  padding: 30px 35px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* Headings */
-.UserProfileEdit-view h1 {
-  text-align: center;
-  margin-bottom: 25px;
-  color: #333;
-}
-
-.UserProfileEdit-view h3 {
-  margin: 12px 0 6px;
-  font-size: 14px;
-  color: #555;
-}
-
-/* Inputs */
-.user-Edit,
-.email-edit,
-.phone-edit,
-.location-edit {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-  outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.user-Edit:focus,
-.email-edit:focus,
-.phone-edit:focus,
-.location-edit:focus {
-  border-color: #4a90e2;
-  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
-}
-
-/* Button */
-.btn-UserEdit {
-  width: 100%;
-  margin-top: 20px;
-  padding: 12px;
-  background: #4a90e2;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.btn-UserEdit:hover {
-  background: #357abd;
-  transform: translateY(-1px);
-}
-
-.btn-UserEdit:active {
-  transform: translateY(0);
-}
-
-/* Mobile responsive */
-@media (max-width: 480px) {
-  .UserProfileEdit-view {
-    width: 90%;
-    padding: 25px;
   }
 }

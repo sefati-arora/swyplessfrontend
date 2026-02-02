@@ -19,6 +19,9 @@ import FaqEdit from './pages/faq/FaqEdit.jsx';
 import FaqView from './pages/faq/faqView.jsx';
 import BookingUpdate from './pages/booking/bookingUpdate.jsx';
 import UserProfileEdit from './pages/UserProfile/UserEdit.jsx';
+import HostList from './pages/Host/hostlist.jsx';
+import HostView from './pages/Host/hostView.jsx';
+import HostEdit from './pages/Host/hostEdit.jsx';
 function App()
 {
   return(
@@ -43,6 +46,9 @@ function App()
          <Route path="/faq/view/:id" element={<FaqView/>}/>
          <Route path="/booking/Update/:id" element={<BookingUpdate/>}/>
          <Route path="/userprofile/Update/:id" element={<UserProfileEdit/>}/>
+         <Route path="/hostlist" element={<HostList/>}/>
+         <Route path="/host/view/:id" element={<HostView/>}/>
+         <Route path="/host/edit/:id" element={<HostEdit/>}/>
        <Route path="/Dash" element={<DashBoard/>}/>
        </Route>
        
