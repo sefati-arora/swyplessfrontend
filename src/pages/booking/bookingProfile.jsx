@@ -109,7 +109,7 @@ function BookingProfile() {
                       <Eye size={18} />
                     </button>
                     <button
-                      className="addbooking-btn"
+                      className="btn-view"
                       onClick={() => navigate(`/booking/Update/${item.id}`)}
                     >
                       <PencilIcon size={18} />
