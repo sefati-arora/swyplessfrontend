@@ -40,11 +40,6 @@ function SubscriptionCreated() {
       const Data = { title, Amount, description, subscriptionType };
       const subCreate = await postData(ApiEndPoint.subscriptionCreated, Data);
       if (subCreate.message == "SUBSCRIPTION CREATED!") {
-        Swal.fire({
-          icon: "success",
-          title: "SUCCESSFULLY!",
-          text: "SUBSCRIPTION CREATED!",
-        });
         navigate("/subList");
       } else {
         Swal.fire({

@@ -16,11 +16,6 @@ function HostView() {
       console.log(hostView);
       if (hostView.message == "HOST FETCH:") {
         setHost(hostView.host);
-        Swal.fire({
-          icon: "success",
-          title: "SUCCESSFULLY",
-          text: hostView.message,
-        });
       } else {
         Swal.fire({
           icon: "error",

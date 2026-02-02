@@ -30,11 +30,6 @@ function BookingUpdate() {
       console.log(response);
       if (response.message == "BOOKING UPDATED!") {
         setBooking(response.booking);
-        Swal.fire({
-          icon: "success",
-          title: "SUCCESSFULY!",
-          text: "success!",
-        });
         navigate("/booking");
       } else {
         Swal.fire({

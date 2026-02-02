@@ -53,11 +53,6 @@ function ProfileUpdate() {
         return;
       }
       if (response.message == "ADMIN PROFILE EDITED!") {
-        Swal.fire({
-          icon: "success",
-          title: "SUCCESSFULY!",
-          text: response.message,
-        });
         navigate("/Dash");
       }
     } catch (error) {

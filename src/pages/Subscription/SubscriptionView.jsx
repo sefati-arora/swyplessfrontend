@@ -15,11 +15,6 @@ function SubscriptionView() {
       console.log(response);
       console.log(">>>", response.subView);
       if (response.message == "SUBSCRIPTION VIEW") {
-        Swal.fire({
-          icon: "success",
-          title: "SUCCESSFULLY!",
-          text: response.message,
-        });
         setSubscriptionView(response.subView);
       } else {
         Swal.fire({

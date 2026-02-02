@@ -27,11 +27,6 @@ function HostEdit() {
       console.log(response);
       if (response.message == "EDIT PROFILE SUCCESSFULLY!") {
         setHost(response.host);
-        Swal.fire({
-          icon: "success",
-          title: "SUCCESSFULLY",
-          text: response.message,
-        });
         navigate("/hostlist");
       } else {
         Swal.fire({

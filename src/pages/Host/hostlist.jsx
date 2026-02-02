@@ -15,11 +15,6 @@ function HostList() {
       console.log(response);
       if (response.message == "HOST DETAILS:") {
         sethost(response.host);
-        Swal.fire({
-          icon: "success",
-          title: "SUCCESSFULLY!",
-          text: response.message,
-        });
       } else {
         Swal.fire({
           icon: "error",

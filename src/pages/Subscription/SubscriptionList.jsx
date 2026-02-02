@@ -21,11 +21,6 @@ function SubscriptionList() {
       console.log(response);
       if (response.message == "SUBSCRIPTION FETCH!") {
         setSub(response.sub);
-        Swal.fire({
-          icon: "success",
-          title: "SUCCESSFULLY!",
-          text: "subscription fetch",
-        });
       } else {
         Swal.fire({
           icon: "error",

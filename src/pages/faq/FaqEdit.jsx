@@ -21,11 +21,6 @@ function FaqEdit() {
       });
       console.log(response);
       if (response.message == "FAQ UPDATED!") {
-        Swal.fire({
-          icon: "success",
-          title: "SUCCESSFULLY!",
-          text: response.message,
-        });
         navigate("/FaqList");
       } else {
         Swal.fire({

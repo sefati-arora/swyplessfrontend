@@ -17,10 +17,6 @@ function FaqList() {
       console.log(response.message);
       if (response.message === "FETCH FAQ:") {
         setFaqList(response.faq);
-        Swal.fire({
-          icon: "success",
-          text: response.message,
-        });
       } else {
         Swal.fire({
           icon: "error",
