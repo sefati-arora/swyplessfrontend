@@ -1,18 +1,17 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useApi from "../../components/useApi";
 import ApiEndPoint from "../../components/ApiEndPoint";
-import './faq.css';
+import "./faq.css";
 function FaqCreation() {
   const [question, setquestion] = useState("");
   const [answer, setanswer] = useState("");
   const { postData } = useApi();
   const faqCreation = async () => {
     try {
-        const data={question,answer}
-      const response = await postData(ApiEndPoint.faqAndHelp,data);
-      console.log(response)
+      const data = { question, answer };
+      const response = await postData(ApiEndPoint.faqAndHelp, data);
+      console.log(response);
       if (response.message == "FAQANDHELP:") {
         Swal.fire({
           icon: "success",
@@ -39,7 +38,7 @@ function FaqCreation() {
     <>
       <div className="Faq-container">
         <div className="faqData-container">
-            <h3>Frequently Asked Questions</h3>
+          <h3>Frequently Asked Questions</h3>
           <h6 className="question-Data">QUESTION:</h6>
           <textarea
             value={question}

@@ -3,105 +3,91 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useApi from "../../components/useApi";
 import ApiEndPoint from "../../components/ApiEndPoint";
-import { Trash2, Eye ,PencilIcon} from "lucide-react";
-import "./host.css"
-function HostList()
-{
-    const[host,sethost]=useState([])
-    const{postData}=useApi();
-    const navigate=useNavigate();
-    const hostData=async()=>
-    {
-        try
-        {
-          const response=await postData(ApiEndPoint.fetchDataHost)
-          console.log(response)
-          if(response.message=="HOST DETAILS:")
-          {
-            sethost(response.host)
-             Swal.fire({
-                icon:'success',
-                title:"SUCCESSFULLY!",
-                text:response.message
-             })
-          }
-          else
-          {
-            Swal.fire({
-                icon:"error",
-                title:"ERROR",
-                text:response.message
-            })
-          }
-        }
-        catch(error)
-        {
-            Swal.fire({
-                icon:"error",
-                title:"ERROR!",
-                text:"SERVER ERROR!"
-            })
-        }
+import { Trash2, Eye, PencilIcon } from "lucide-react";
+import "./host.css";
+function HostList() {
+  const [host, sethost] = useState([]);
+  const { postData } = useApi();
+  const navigate = useNavigate();
+  const hostData = async () => {
+    try {
+      const response = await postData(ApiEndPoint.fetchDataHost);
+      console.log(response);
+      if (response.message == "HOST DETAILS:") {
+        sethost(response.host);
+        Swal.fire({
+          icon: "success",
+          title: "SUCCESSFULLY!",
+          text: response.message,
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "ERROR",
+          text: response.message,
+        });
+      }
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "ERROR!",
+        text: "SERVER ERROR!",
+      });
     }
-    const deleteHost=async(id)=>
-    {
-        try
-        { 
-             const result = await Swal.fire({
-                  title: "Are you sure?",
-                  text: "This User will be deleted!",
-                  icon: "warning",
-                  showCancelButton: true,
-                  confirmButtonText: "Yes, delete it!",
-                });
-            
-                if (!result.isConfirmed) return;
-          const hostdelete=await postData(ApiEndPoint.deleteHost,{id})
-          console.log(hostdelete)
-          if(hostdelete.message=="DELETE HOST SUCCESSFULLY!")
-          {
-             Swal.fire({
-                icon:"success",
-                title:"successfully",
-                text:hostdelete.message
-             })
+  };
+  const deleteHost = async (id) => {
+    try {
+      const result = await Swal.fire({
+        title: "Are you sure?",
+        text: "This User will be deleted!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete it!",
+      });
 
-           sethost((prev) => prev.filter((host) => host.id !== id));
+      if (!result.isConfirmed) return;
+      const hostdelete = await postData(ApiEndPoint.deleteHost, { id });
+      console.log(hostdelete);
+      if (hostdelete.message == "DELETE HOST SUCCESSFULLY!") {
+        Swal.fire({
+          icon: "success",
+          title: "successfully",
+          text: hostdelete.message,
+        });
+
+        sethost((prev) => prev.filter((host) => host.id !== id));
         navigate("/Dash");
-          }
-        } 
-        catch(error)
-        {
-            Swal.fire({
-                icon:"error",
-                title:"ERROR!",
-                text:"ERROR"
-            })
-        }
+      }
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "ERROR!",
+        text: "ERROR",
+      });
     }
-    useEffect(()=>
-    {
-      hostData()
-    },[])
-    return(
-        <>
-        <div className="hostlist-container">
-            <div className="hostlist-data">
-                <h1>HOST PROFILE:</h1>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Sr No.</th>
-                            <th>Profile Image</th>
-                            <th>NAME:</th>
-                            <th>EMAIL:</th>
-                            <th>PHONE NUMBER:</th>
-                            <th>LOCATION:</th>
-                            <th>BUTTON:</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {host.length === 0 ? (
+  };
+  useEffect(() => {
+    hostData();
+  }, []);
+  return (
+    <>
+      <div className="hostlist-container">
+        <div className="hostlist-data">
+          <h1>HOST PROFILE:</h1>
+          <table>
+            <thead>
+              <tr>
+                <th>Sr No.</th>
+                <th>Profile Image</th>
+                <th>NAME:</th>
+                <th>EMAIL:</th>
+                <th>PHONE NUMBER:</th>
+                <th>LOCATION:</th>
+                <th>BUTTON:</th>
+              </tr>
+            </thead>
+            <tbody>
+              {host.length === 0 ? (
                 <tr>
                   <td
                     colSpan="7"
@@ -142,7 +128,7 @@ function HostList()
                       >
                         <Eye size={18} />
                       </button>
-                       <button
+                      <button
                         className="btn-view"
                         onClick={() => navigate(`/host/edit/${host.id}`)}
                       >
@@ -153,10 +139,10 @@ function HostList()
                 ))
               )}
             </tbody>
-                </table>
-            </div>
+          </table>
         </div>
-        </>
-    )
+      </div>
+    </>
+  );
 }
 export default HostList;

@@ -24,7 +24,7 @@ function HostView() {
       } else {
         Swal.fire({
           icon: "error",
-          title:"ERROR!",
+          title: "ERROR!",
           text: hostView.message,
         });
       }

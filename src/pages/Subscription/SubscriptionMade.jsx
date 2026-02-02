@@ -97,7 +97,6 @@ function SubscriptionCreated() {
             <option value="1">MONTHLY</option>
             <option value="2">YEARLY</option>
           </select>
-
           <button className="btn-sub" onClick={subscriptionCreated}>
             SAVE
           </button>
