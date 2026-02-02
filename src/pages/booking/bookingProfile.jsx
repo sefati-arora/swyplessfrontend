@@ -66,7 +66,7 @@ function BookingProfile() {
     <>
       <div className="booking-container">
         <table>
-          <thead>
+          <thead>  
             <tr>
               <th>providerId</th>
               <th>activityID</th>

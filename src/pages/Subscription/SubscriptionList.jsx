@@ -35,7 +35,7 @@ function SubscriptionList() {
       });
     }
   };
-
+  
   const SubscriptionDelete = async (id) => {
     const result = await Swal.fire({
       title: "Are you sure?",
