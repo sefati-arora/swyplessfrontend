@@ -1,0 +1,113 @@
+.profileUpdate-container
+{
+    height:500px;
+    width:1660px;
+    /* border:1px solid black; */
+    position: fixed;
+    margin-left:270px ;
+}
+.profileUpdateData-container
+{
+    height:440px;
+    width:600px;
+    border:1px solid black;
+    margin-left: 510px;
+    margin-top: 122px;
+    border-radius: 80px 2px 60px 2px;
+}
+.name-update
+{
+    margin-left: 106px;
+    margin-top: 61px;
+    font-size: x-large;
+    font-weight: 800;
+    width:84px;
+    /* border:1px solid black; */
+}
+.nameUpdate-input
+{
+    float: right;
+    margin-top: -55px;
+    height:27px;
+    width:286px;
+    margin-right: 70px;
+    border:none;
+    border-bottom: 1px solid black;
+}
+.email-update
+{
+    margin-left: 106px;
+    margin-top: 25px;
+    font-size: x-large;
+    font-weight: 800;
+    width:90px;
+    /* border:1px solid black; */
+
+}
+.emailUpdate-input
+{
+     float: right;
+    margin-top: -55px;
+    height:27px;
+    width:286px;
+    margin-right: 70px;
+    border:none;
+    border-bottom: 1px solid black;
+}
+.phone-update
+{
+    margin-left: 79px;
+    margin-top: 25px;
+    font-size: x-large;
+    font-weight: 800;
+    width:218px;
+    /* border:1px solid black; */
+}
+.phoneUpdate-input
+{
+     float: right;
+    margin-top: -55px;
+    height:27px;
+    width:272px;
+    margin-right: 14px;
+    border:none;
+    border-bottom: 1px solid black;
+}
+.location-update
+{
+      margin-left: 79px;
+    margin-top: 25px;
+    font-size: x-large;
+    font-weight: 800;
+    width:218px;
+    /* border:1px solid black; */
+}
+.locationUpdate-input
+{
+     float: right;
+    margin-top: -55px;
+    height:27px;
+    width:300px;
+    margin-right: 50px;
+    border:none;
+    border-bottom: 1px solid black;
+}
+.btn-update
+{
+    height:50px;
+    width:280px;
+    border:transparent;
+    background-color: rgb(28, 63, 202);
+    color:black;
+    font-size: larger;
+    font-weight: bold;
+    margin-left: 120px;
+    border-radius: 20px;
+    margin-top: 12px;
+}
+.header
+{
+    margin-left: 144px;
+    font-weight: bold;
+    font-style: inherit;
+}

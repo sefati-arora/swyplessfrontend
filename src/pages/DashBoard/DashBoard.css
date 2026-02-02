@@ -1,0 +1,66 @@
+.Dash-container
+{
+height:680px;
+width:1740px;
+margin-left:228px;
+/* border:1px solid black; */
+position: fixed;
+}
+.box-conatiner
+{
+    height:200px;
+    width:1730px;
+    /* border:1px solid black; */
+}
+.box1
+{
+    height:150px;
+    width:400px;
+    border:transparent;
+    margin-left: 63px;
+    margin-top: 12px;
+    border-radius: 89px;
+    background-color: rgb(141, 141, 189);
+}
+.box2
+{
+  height:150px;
+  width:400px;
+  border:transparent;
+  margin-left: 665px;
+  margin-top: -152px;  
+    border-radius: 89px;
+  background-color: rgb(141, 141, 189);
+}
+.box3
+{
+    height:150px;
+    width:400px;
+    border:transparent;
+    float:right;
+    margin-right: 63px;
+    margin-top:-152px;
+      border-radius: 89px;
+  background-color: rgb(141, 141, 189);
+}
+.user-box
+{
+    margin-left: 90px;
+    line-height: 122px;
+    font-size: x-large;
+    font-weight: bold;
+}
+.booking-box
+{ 
+  margin-left: 90px;
+  line-height: 125px;
+   font-size: x-large;
+    font-weight: bold;
+}
+.host-box
+{
+     margin-left: 90px;
+  line-height: 125px;
+   font-size: x-large;
+    font-weight: bold;
+}

@@ -1,0 +1,113 @@
+/* Overall container */
+.profile-container {
+  height: 500px;
+  width:500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+  position: fixed;
+  padding: 20px;
+  margin-left: 590px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Form card */
+.data-container {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 30px 28px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Title */
+.data-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0f172a;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Labels */
+.data-container h3 {
+  margin: 14px 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* Inputs - shared style */
+.name-input,
+.email-input,
+.location-input {
+  width: 80%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+  outline: none;
+  font-size: 14px;
+  color: #0f172a;
+  background-color: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+/* Placeholder */
+.name-input::placeholder,
+.email-input::placeholder,
+.location-input::placeholder {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* Focus effect */
+.name-input:focus,
+.email-input:focus,
+.location-input:focus {
+  border-color: #6366f1;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Save button */
+.btn-save {
+  width: 89%;
+  margin-top: 22px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button hover */
+.btn-save:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.35);
+}
+
+/* Button active */
+.btn-save:active {
+  transform: scale(0.98);
+}
+
+/* Small animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

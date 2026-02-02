@@ -1,0 +1,466 @@
+/* Page background */
+.subscription-container {
+  height: 507px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card */
+.subscription-data {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px 28px;
+   background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.6s ease;
+}
+
+/* Heading */
+.subscription-data h1 {
+  text-align: center;
+  margin-bottom: 22px;
+  color: #333;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+/* Labels */
+.subscription-data h4 {
+  margin: 14px 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1b1a1a;
+  text-transform: capitalize;
+}
+
+/* Inputs */
+.subscription-data input {
+  width: 80%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+/* Input focus */
+.subscription-data input:focus {
+  border-color: #667eea;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+.select-subType
+{
+  height:34px;
+  width:200px;
+}
+
+/* Button */
+.btn-sub {
+  width: 90%;
+  margin-top: 22px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #34427e, #342049);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* Button hover */
+.btn-sub:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* Button active */
+.btn-sub:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .subscription-data {
+    padding: 24px 20px;
+  }
+
+  .subscription-data h1 {
+    font-size: 22px;
+  }
+}
+
+
+ /* .......................subscription list css ..............................*/
+
+ /* Page container */
+.subscription-container {
+  padding: 30px;
+  background: #f4f6f9;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Table base */
+.subscription-container table {
+  width: 100%;
+  max-width: 1100px;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Table head */
+.subscription-container thead {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+.subscription-container th {
+  padding: 14px 16px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+/* Table body */
+.subscription-container td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Zebra rows */
+.subscription-container tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Hover effect */
+.subscription-container tbody tr:hover {
+  background-color: #eef2ff;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Empty state */
+.subscription-container tbody td[colspan] {
+  font-size: 15px;
+  color: #6b7280;
+}
+
+/* Button cell */
+.subscription-container td:last-child {
+  display: flex;
+  gap: 10px;
+}
+
+/* Common button styles */
+.subscription-container button {
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  border:transparent;
+}
+
+/* View button */
+.btn-view {
+  background-color: #e0e7ff;
+  color: #4338ca;
+}
+
+.btn-view:hover {
+  background-color: #c7d2fe;
+  transform: scale(1.05);
+}
+.btn-edit
+{
+   background-color: #e0e7ff;
+  color: #9924ec;
+}
+.btn-edit:hover
+{
+background-color: #c7d2fe;
+  transform: scale(1.05);
+}
+/* Delete button */
+.btn-delete {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.btn-delete:hover {
+  background-color: #fecaca;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .subscription-container table {
+    font-size: 13px;
+  }
+
+  .subscription-container th,
+  .subscription-container td {
+    padding: 10px;
+  }
+
+  .subscription-container td:last-child {
+    flex-direction: column;
+  }
+}
+.subscriptionData-container
+{
+  height:200px;
+  width:800px;
+ 
+}
+.add-btn
+{
+  height:49px;
+  width:122px;
+  margin-right: 12px;
+  float: right;
+  margin-top: -70px;
+  background-color: #4338ca;
+  color:white;
+}
+
+/* ............................viewpage................... */
+/* Page container */
+.subView-container {
+  min-height: 100vh;
+  margin-left: 570px;
+  background: linear-gradient(135deg, #f4f7fb, #e9eef5);
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position:fixed;
+}
+
+/* Card */
+.subViewData-conatiner {
+  width: 100%;
+  max-width: 520px;
+  background: #4e71e2;
+  padding: 28px 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Headings */
+.subViewData-conatiner h3 {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #292828;
+  text-transform: capitalize;
+}
+
+/* Inputs */
+.subViewData-conatiner input {
+  width: 85%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background-color: #f8f9fb;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Disabled input styling */
+.subViewData-conatiner input:disabled {
+  background-color: #f4f6fa;
+  color: #444;
+  cursor: not-allowed;
+}
+
+/* Input hover */
+.subViewData-conatiner input:hover {
+  border-color: #4f46e5;
+}
+
+/* Section-specific optional styling */
+.title-view {
+  color: #4f46e5;
+}
+
+.Amount-view {
+  color: #16a34a;
+}
+
+.description-view {
+  color: #0f172a;
+}
+
+.subscriptionType-view {
+  color: #9333ea;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .subViewData-conatiner {
+    padding: 22px;
+  }
+}
+/* ..................EDIT PAGE........... */
+/* Page background */
+.sub-editContainer {
+  min-height: 100vh;
+  margin-top: -180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+}
+
+/* Card container */
+.sub-DataContainer {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  padding: 30px;
+  border-radius: 16px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Heading */
+.sub-DataContainer h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Labels */
+.sub-DataContainer h3 {
+  margin-bottom: 6px;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #1d1d1d;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+/* Inputs */
+.sub-DataContainer input {
+  width: 88%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+
+/* Input focus effect */
+.sub-DataContainer input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* Update button */
+.btn-Dataedit{
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #2e439f, #41295a);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button hover */
+.btn-Dataedit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.35);
+}
+
+/* Button active */
+.btn-Dataedit:active {
+  transform: scale(0.98);
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .sub-DataContainer {
+    padding: 22px;
+  }
+
+  .sub-DataContainer h1 {
+    font-size: 20px;
+  }
+}

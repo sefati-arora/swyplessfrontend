@@ -1,0 +1,393 @@
+/* Page wrapper */
+.Faq-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-top: -100px;
+  align-items: center;
+  background: linear-gradient(135deg, #eef2f7, #dbe4f0);
+  padding: 20px;
+}
+
+/* Card */
+.faqData-container {
+  width: 100%;
+  max-width: 550px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  animation: slideFade 0.5s ease;
+    background: linear-gradient(135deg, #3874bd, #021937);
+}
+
+/* Labels */
+.question-Data,
+.answer-Data {
+  font-size: 13px;
+  font-weight: 700;
+  color: #171616;
+  margin-bottom: 6px;
+  letter-spacing: 0.6px;
+}
+
+/* Textareas */
+.faqData-container textarea {
+  width: 89%;
+  min-height: 90px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+/* Placeholder */
+.faqData-container textarea::placeholder {
+  color: #999;
+}
+
+/* Focus effect */
+.faqData-container textarea:focus {
+  outline: none;
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+  background-color: #fafbff;
+}
+
+/* Save button */
+.btn-faq {
+  width: 80%;
+  padding: 13px;
+  margin-left: 54px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6c63ff, #4f46e5);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button hover */
+.btn-faq:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(108, 99, 255, 0.35);
+}
+
+/* Button active */
+.btn-faq:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(108, 99, 255, 0.25);
+}
+
+/* Animation */
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .faqData-container {
+    padding: 22px;
+  }
+
+  .btn-faq {
+    font-size: 14px;
+  }
+}
+
+/* 
+   FAQ LIST ..................*/
+/* Main container */
+.Faq-container {
+  padding: 30px;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+}
+
+/* Card-style wrapper */
+.Faq-Data {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  margin-top:-180px;
+}
+.btnFaq-add
+{
+   height:49px;
+  width:122px;
+  margin-right: 12px;
+  float: right;
+  border:none;
+  background-color:  #4338ca;
+  color:white;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.btnFaq-add a
+{
+    text-decoration: none;
+    color:white
+}
+/* Heading */
+.Faq-Data h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+  float: left;
+}
+
+/* Table styling */
+.Faq-Data table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+/* Table header */
+.Faq-Data thead {
+  background-color: #2f80ed;
+  color: #fff;
+}
+
+.Faq-Data th,
+.Faq-Data td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Center Sr No */
+.Faq-Data th:first-child,
+.Faq-Data td:first-child {
+  text-align: center;
+  width: 70px;
+}
+
+/* Action column */
+.Faq-Data th:last-child,
+.Faq-Data td:last-child {
+  text-align: center;
+  width: 150px;
+}
+
+/* Row hover effect */
+.Faq-Data tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+/* Buttons */
+.btn-delete,
+.btn-view,
+.btn-edit {
+  border: none;
+  padding: 6px 8px;
+  margin: 0 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Delete button */
+.btn-delete {
+  background-color: #ffe5e5;
+  color: #d63031;
+}
+
+.btn-delete:hover {
+  background-color: #ffcccc;
+}
+
+/* View button */
+.btn-view {
+  background-color: #e8f0fe;
+  color: #1e5eff;
+}
+
+.btn-view:hover {
+  background-color: #d0e1ff;
+}
+
+/* Edit button */
+.btn-edit {
+  background-color: #e6f4ea;
+  color: #1e7f4f;
+}
+
+.btn-edit:hover {
+  background-color: #ccebdc;
+}
+
+/* No data row */
+.Faq-Data td[colspan] {
+  color: #777;
+  font-style: italic;
+}
+
+
+/* ..................FAQ EDIT................... */
+
+/* Page wrapper */
+.faq-Edit {
+  min-height: 100vh;
+  background: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Card */
+.faq-data {
+  background: #ffffff;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+.faq-data h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Labels */
+.question-data,
+.answer-data {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Textareas */
+.question-text,
+.answer-text {
+  width: 100%;
+  min-height: 90px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  resize: vertical;
+  outline: none;
+  margin-bottom: 18px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.question-text:focus,
+.answer-text:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+}
+
+/* Button */
+.faqEdit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.1s, box-shadow 0.1s;
+}
+
+.faqEdit-btn:hover {
+  background: #4338ca;
+  box-shadow: 0 6px 15px rgba(79, 70, 229, 0.3);
+}
+
+.faqEdit-btn:active {
+  transform: scale(0.98);
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .faq-data {
+    padding: 20px;
+  }
+
+  .faq-data h1 {
+    font-size: 20px;
+  }
+}
+
+/* Page container */
+.faqView-container {
+  min-height: 100vh;
+  background: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Card */
+.faqView-data {
+  background: #ffffff;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Labels */
+.faqView-data .question-data,
+.faqView-data .answer-data {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Read-only textarea */
+.question-view,
+.answer-view {
+  width: 100%;
+  min-height: 90px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  resize: none;
+  background: #f9fafb;
+  color: #374151;
+  margin-bottom: 20px;
+  cursor: not-allowed;
+}
+
+/* Remove focus outline (read-only) */
+.question-view:focus,
+.answer-view:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .faqView-data {
+    padding: 20px;
+  }
+}

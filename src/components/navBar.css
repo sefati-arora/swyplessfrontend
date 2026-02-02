@@ -1,0 +1,136 @@
+/* Navbar wrapper */
+.nav-bar {
+  width: 99%;
+  height: 87px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  gap: 25px;
+  margin-left: -12px;
+  margin-top: -9px;
+  position: fixed;
+  position: sticky;
+  top: 0;
+  background-color: #4f46e5;
+  z-index: 1000;
+}
+
+/* Notification icon */
+.notify {
+  cursor: pointer;
+  color: #161515;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.notify:hover {
+  color: #4f46e5;
+}
+
+/* Admin section */
+.Admin-controller {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #191717;
+  cursor: pointer;
+}
+
+/* Dropdown */
+.Admin-controller select {
+  margin-left: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: transparent;
+  font-size: 13px;
+ background-color: #4f46e5;
+  cursor: pointer;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.Admin-controller select:hover {
+  border-color: #4f46e5;
+}
+
+.Admin-controller select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+}
+
+/* Dropdown options */
+.Admin-controller option {
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav-bar {
+    padding: 0 15px;
+    gap: 15px;
+  }
+
+  .Admin-controller {
+    font-size: 13px;
+  }
+
+  .Admin-controller select {
+    font-size: 12px;
+  }
+}
+
+
+/* Main layout wrapper */
+.admin-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fb;
+}
+
+/* Body under navbar */
+.admin-body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Content area */
+.admin-content {
+  flex: 1;
+  padding: 25px;
+  overflow-y: auto;
+  background: #f5f7fb;
+}
+
+/* Smooth scrolling */
+.admin-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.admin-content::-webkit-scrollbar-thumb {
+  background: #c7cbe3;
+  border-radius: 10px;
+}
+
+.admin-content::-webkit-scrollbar-thumb:hover {
+  background: #a3a8d8;
+}
+
+/* Responsive handling */
+@media (max-width: 768px) {
+  .admin-content {
+    padding: 15px;
+  }
+}
+.select-row
+{
+    height:12px;
+    width:29px;
+    color:#211f39
+}
