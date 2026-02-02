@@ -87,6 +87,7 @@ function HostList()
         <>
         <div className="hostlist-container">
             <div className="hostlist-data">
+                <h1>HOST PROFILE:</h1>
                 <table>
                     <thead>
                         <tr>
