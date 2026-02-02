@@ -1,5 +1,5 @@
 import{ useEffect, useState } from 'react';
- import{useNavigate}from "react-router-dom";
+ import{useNavigate,Link}from "react-router-dom";
 import Swal from "sweetalert2";
 import useApi from "../../components/useApi";
 import ApiEndpoint from "../../components/ApiEndPoint";
@@ -54,9 +54,9 @@ function DashBoard()
         <>
         <div className="Dash-container">
             <div className="box-conatiner">
-                <div className="box1"><span className="user-box">USER:{count?.user || 0}</span></div>
-                <div className="box2"><span className="booking-box">BOOKING:{count?.booking || 0}</span></div>
-                <div className="box3"><span className="host-box">HOST:{count ?.host || 0}</span></div>
+                <div className="box1"><span className="user-box"><Link to ="/UserProfile">USER:</Link>{count?.user || 0}</span></div>
+                <div className="box2"><span className="booking-box"><Link to ="/booking">BOOKING:</Link>{count?.booking || 0}</span></div>
+                <div className="box3"><span className="host-box"><Link to ="/hostlist">HOST:</Link>{count ?.host || 0}</span></div>
             </div>
         </div>
         </>
